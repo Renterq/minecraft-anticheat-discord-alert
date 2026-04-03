@@ -30,7 +30,6 @@ async def check_logs():
             return
 
         with open(LOG_FILE_PATH, 'r', encoding='utf-8') as file:
-            # Dosyanın sonuna git ve yeni satırları oku
             file.seek(last_pos)
             new_lines = file.readlines()
             last_pos = file.tell()
@@ -39,9 +38,7 @@ async def check_logs():
                 channel = client.get_channel(CHANNEL_ID)
                 if channel:
                     for line in new_lines:
-                        # Hile koruma eklentilerinin (Vulcan ve GrimAC) loglarını filtrele
                         if "Vulcan" in line or "Grim" in line or "GrimAAC" in line:
-                            # Mesajı Discord'a gönderilecek şekilde formatla
                             formatted_message = f"🚨 **Hile Uyarısı!**\n```{line.strip()}```"
                             await channel.send(formatted_message)
                             await asyncio.sleep(0.5) # Spamı önlemek için küçük bir bekleme
