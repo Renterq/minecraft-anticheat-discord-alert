@@ -6,7 +6,6 @@ from discord.ext import tasks
 
 # Discord Bot Tokeninizi Buraya Girin
 TOKEN = 'SENIN_BOT_TOKENIN_BURAYA_GELECEK'
-# Logların Gönderileceği Discord Kanalının ID'si
 CHANNEL_ID = (CHANNEL_ID) # Burayı kendi kanal ID'nizle değiştirin
 # Minecraft Sunucusu Log Dosyasının Yolu (Örn: /home/minecraft/server/logs/latest.log)
 LOG_FILE_PATH = 'latest.log' 
