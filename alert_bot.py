@@ -4,7 +4,6 @@ import time
 import asyncio
 from discord.ext import tasks
 
-# Discord Bot Tokeninizi Buraya Girin
 TOKEN = 'SENIN_BOT_TOKENIN_BURAYA_GELECEK'
 CHANNEL_ID = (CHANNEL_ID) # Burayı kendi kanal ID'nizle değiştirin
 LOG_FILE_PATH = 'latest.log' 
