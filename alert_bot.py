@@ -38,7 +38,7 @@ async def check_logs():
                         if "Vulcan" in line or "Grim" in line or "GrimAAC" in line:
                             formatted_message = f"🚨 **Hile Uyarısı!**\n```{line.strip()}```"
                             await channel.send(formatted_message)
-                            await asyncio.sleep(0.5) # Spamı önlemek için küçük bir bekleme
+                            await asyncio.sleep(0.5)
 
     except Exception as e:
         print(f"Log okuma hatası: {e}")
